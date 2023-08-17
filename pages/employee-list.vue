@@ -59,38 +59,51 @@
         >Select All</label>
       </div>
     </div>
-    <div class="employee-container">
-      <div class="employee-card flex py-3 border-t-2 w-full justify-between">
-        <img
-          src=""
-          alt=""
-          class="employee-img border-2 w-14 h-14 aspect-square rounded-[50%]"
-        >
-        <div class="employee-bio flex gap-1 flex-col">
-          <h3 class="employee-name text-xl">Caleb Nwafor</h3>
-          <span class="employee-position text-sm">Accountant</span>
-          <span class="employee-gender text-sm">Female | Monthly</span>
-        </div>
-        <p class="employee-salary self-end font-bold text-green-950">&#8358;250,600.78</p>
-      </div>
-      <div class="employee-card flex py-3 border-t-2 w-full justify-between">
-        <img
-          src=""
-          alt=""
-          class="employee-img border-2 w-14 h-14 aspect-square rounded-[50%]"
-        >
-        <div class="employee-bio flex gap-1 flex-col">
-          <h3 class="employee-name text-xl">Wasiu Tiamiyu</h3>
-          <span class="employee-position text-sm">Product Designer</span>
-          <span class="employee-gender text-sm">Male | Monthly</span>
-        </div>
-        <p class="employee-salary self-end font-bold text-green-950">&#8358;550,600.78</p>
-      </div>
+    <div
+      class="employee-container"
+      v-for="employee in employees"
+    >
+      <EmployeeCard :employee="employee" />
     </div>
   </main>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import EmployeeType from 'types/EmployeeType';
+
+const employees: EmployeeType[] = [
+  {
+    name: 'Caleb Nwafor',
+    position: 'Accountant',
+    gender: 'Female | Monthly',
+    salary: '250,600.78'
+  },
+  {
+    name: 'Wasiu Tiamiyu',
+    position: 'Product Designer',
+    gender: 'Male | Monthly',
+    salary: '550,600.78'
+  },
+  {
+    name: 'Toyin Faleke',
+    position: 'Product Manager',
+    gender: 'Female | Monthly',
+    salary: '700,600.78'
+  },
+  {
+    name: 'Ada Okorie',
+    position: 'Customer Service',
+    gender: 'Female | Monthly',
+    salary: '160,600.78'
+  },
+  {
+    name: 'Bolade Ifedayo',
+    position: 'Data Analyst',
+    gender: 'Female | Monthly',
+    salary: '250,600.78'
+  },
+]
+</script>
 
 <style lang="scss" scoped>
 </style>
