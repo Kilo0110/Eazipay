@@ -2,7 +2,7 @@
   <header class="px-5">
     <div class="bio-container py-5 gap-3 flex items-center">
       <img
-        src="/assets/img/wasiu.png"
+        src="/img/wasiu.png"
         alt="Wasiu profile picture"
       >
       <h1 class="welcome-text">Hello Wasiu</h1>
@@ -70,14 +70,14 @@
       </button>
       <button class="quick-action-btn bg-[#F0EEFF] p-5 rounded-2xl col-start-3 col-span-1 row-start-2 row-span-1">
         <img
-          src="/assets/svg/envelope-open-dollar.svg"
+          src="~/assets/svg/envelope-open-dollar.svg"
           alt=""
           class="w-10 fill-[#5542CF]"
         >
       </button>
       <button class="quick-action-btn bg-[#FFF2DB] p-5 rounded-2xl col-start-1 col-span-1 row-start-3 row-span-1">
         <img
-          src="/assets/svg/money-check-dollar-pen-svgrepo-com.svg"
+          src="~/assets/svg/money-check-dollar-pen-svgrepo-com.svg"
           alt=""
           class="w-10"
         >

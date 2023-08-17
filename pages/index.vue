@@ -65,7 +65,7 @@
     </div>
     <div class="img-container basis-1/2 flex items-center">
       <img
-        src="/img/hero frame.png"
+        src="/img/hero-img.png"
         class="w-full"
         alt=""
       >
@@ -108,14 +108,14 @@
           class="max-w-sm absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
         >
         <img
-          src="/img/onboarding screenshot.png"
+          src="/img/onboarding-screenshot.png"
           alt=""
           class="max-w-[200px] absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
         >
       </div>
       <div class="onboarding-steps-container w-full flex justify-center items-center">
         <img
-          src="/img/onboarding steps.png"
+          src="/img/onboarding-steps.png"
           alt=""
           class="w-4/6"
         >
@@ -125,7 +125,7 @@
 
   <section class="free-section relative flex min-h-[50vh] bg-red-100 px-32 py-20">
     <img
-      src="/img/red dots.png"
+      src="/img/red-dots.png"
       alt=""
       class="dots absolute left-24 top-0"
     >
@@ -136,7 +136,7 @@
     </div>
     <div class="img-container basis-1/2">
       <img
-        src="/img/Frame 48096442.png"
+        src="/img/Frame-48096442.png"
         alt=""
         class="w-full"
       >
@@ -145,7 +145,7 @@
 
   <section class="demo-section min-h-[70vh] flex items-center justify-between gap-5 relative px-24 py-10">
     <img
-      src="/img/green dots.png"
+      src="/img/green-dots.png"
       alt=""
       class="absolute top-8 left-0 w-36"
     >

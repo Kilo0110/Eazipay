@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', 'nuxt-icon'],
   css: [
-    '~/public/assets/css/main.css',
+    '~/assets/css/main.css',
     '@fortawesome/fontawesome-svg-core/styles.css',
   ],
 });
