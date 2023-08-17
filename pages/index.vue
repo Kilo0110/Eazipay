@@ -3,7 +3,7 @@
     <nav class="nav main-nav flex justify-center py-5 gap-5 w-full items-center">
       <NuxtLink to="/">
         <img
-          src="/assets/img/logo.png"
+          src="/img/logo.png"
           alt="Eazipay logo"
         >
       </NuxtLink>
@@ -65,7 +65,7 @@
     </div>
     <div class="img-container basis-1/2 flex items-center">
       <img
-        src="/assets/img/hero frame.png"
+        src="/img/hero frame.png"
         class="w-full"
         alt=""
       >
@@ -103,19 +103,19 @@
     <div class="onboardinh-section__main-content flex w-full">
       <div class="onboarding-img-container relative w-full">
         <img
-          src="/assets/img/rings.png"
+          src="/img/rings.png"
           alt=""
           class="max-w-sm absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
         >
         <img
-          src="/assets/img/onboarding screenshot.png"
+          src="/img/onboarding screenshot.png"
           alt=""
           class="max-w-[200px] absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
         >
       </div>
       <div class="onboarding-steps-container w-full flex justify-center items-center">
         <img
-          src="/assets/img/onboarding steps.png"
+          src="/img/onboarding steps.png"
           alt=""
           class="w-4/6"
         >
@@ -125,7 +125,7 @@
 
   <section class="free-section relative flex min-h-[50vh] bg-red-100 px-32 py-20">
     <img
-      src="/assets/img/red dots.png"
+      src="/img/red dots.png"
       alt=""
       class="dots absolute left-24 top-0"
     >
@@ -136,7 +136,7 @@
     </div>
     <div class="img-container basis-1/2">
       <img
-        src="/assets/img/Frame 48096442.png"
+        src="/img/Frame 48096442.png"
         alt=""
         class="w-full"
       >
@@ -145,7 +145,7 @@
 
   <section class="demo-section min-h-[70vh] flex items-center justify-between gap-5 relative px-24 py-10">
     <img
-      src="/assets/img/green dots.png"
+      src="/img/green dots.png"
       alt=""
       class="absolute top-8 left-0 w-36"
     >
@@ -208,7 +208,7 @@
     <div class="col-span-1 col-start-1 bio-column">
       <NuxtLink to="/">
         <img
-          src="/assets/img/logo.png"
+          src="/img/logo.png"
           alt="Logo img"
           class="w-20"
         >
@@ -259,7 +259,7 @@
 
 <style lang="scss" scoped>
 .hero-section {
-  background: url('/assets/img/gradients.png') top center / cover;
+  background: url('/img/gradients.png') top center / cover;
 }
 
 .page-heading {
@@ -282,6 +282,6 @@ input {
 }
 
 .individual-section {
-  background: url('/assets/img/wave.png') top center / cover
+  background: url('/img/wave.png') top center / cover
 }
 </style>
