@@ -1,5 +1,5 @@
 <template>
-  <header class="flex justify-between px-5 py-3 items-center">
+  <header class="flex justify-between px-4 py-3 items-center">
     <button class="menu-button bg-gray-200 w-11 h-11 rounded-xl">
       <Icon
         name="uis:bars"
@@ -17,8 +17,8 @@
       ></span>
     </button>
   </header>
-  <main class="bg-gray-200 px-2">
-    <section class="business-profile-section p-3 rounded-lg">
+  <main class="bg-gray-200 px-4">
+    <section class="business-profile-section py-3 rounded-lg">
       <h2 class="capitalize bg-white px-4 py-3 my-2 font-bold flex justify-between items-center rounded-2xl">Business
         profile
         <button class="close-business-profile-tab-btn">
@@ -35,68 +35,133 @@
         <button class="kyc-tab py-3 text-center text-gray-700 font-bold px-2 bg-white">KYC information</button>
       </div>
     </section>
-    <section class="edit-company-information-section bg-white py-10 px-5 flex flex-col">
-      <CustomInput
-        name="company-name-input"
-        label="Company name"
-        type="text"
-      />
-      <div class="company-registraion-container">
-        <p>Is your company registered?</p>
-        <CallToAction
-          button-text="Yes"
-          :is-colored="true"
+    <section class="edit-company-information-section bg-white px-2 flex flex-col gap-3 rounded-2xl">
+      <h1 class="py-4 border-b border-gray-200 flex items-center gap-5">
+        <button>
+          <Icon
+            name="ion:chevron-back"
+            size="25"
+          />
+        </button>
+        Edit Company Information
+      </h1>
+      <form
+        action=""
+        class="update-company-profile-form p-3 rounded-xl border border-gray-200"
+      >
+        <div class="logo-input-container">
+          <CustomFileInput :file-preview="logoFilePreview">
+            <template #file-input-slot>
+              <FileInput
+                @file-updated="captureFile($event)"
+                class="self-end"
+              />
+            </template>
+          </CustomFileInput>
+        </div>
+        <CustomInput
+          name="company-name-input"
+          label="Company name"
+          type="text"
         />
-        <CallToAction
-          button-text="No"
-          :is-colored="false"
+        <div class="company-registraion-container flex flex-col gap-2">
+          <p>Is your company registered?</p>
+          <div class="flex gap-2">
+            <CallToAction
+              button-text="Yes"
+              :is-colored="true"
+              class="text-xs rounded-xl"
+            />
+            <CallToAction
+              button-text="No"
+              :is-colored="false"
+              class="text-xs rounded-xl"
+            />
+          </div>
+        </div>
+        <!-- <div class="registration-proof-container">
+          <CustomFileInput :file-preview="regFilePreview">
+            <template #file-input-slot>
+              <FileInput
+                @file-updated="captureFile($event)"
+                class="self-end"
+              />
+            </template>
+          </CustomFileInput>
+        </div> -->
+        <CustomInput
+          name="office-address-input"
+          type="address"
+          label="Office Address"
         />
-      </div>
-      <CustomInput
-        name="office-address-input"
-        type="address"
-        label="Office Address"
-      />
-      <CustomInput
-        name="pension-code-input"
-        type="text"
-        label="Pension code"
-      />
-      <CustomInput
-        name="pension-ID-input"
-        type="text"
-        label="PAYE ID"
-      />
-      <CustomInput
-        name="nhf-code-input"
-        type="text"
-        label="NHF Code"
-      />
-      <CustomInput
-        name="website-input"
-        type="url"
-        label="Website"
-      />
-      <CustomInput
-        name="indstry-input"
-        type="text"
-        label="Industry"
-      />
-      <div class="form-action-btn flex">
-        <CallToAction
-          button-text="Cancel"
-          :is-colored="false"
+        <CustomSelect
+          :options="companySizeOptions"
+          name="company-size"
+          label="Company Size"
         />
-        <CallToAction
-          button-text="Save"
-          :is-colored="true"
+        <CustomInput
+          name="pension-code-input"
+          type="text"
+          label="Pension code"
         />
-      </div>
+        <CustomSelect
+          :options="stateOptions"
+          name="PAYE-state"
+          label="PAYE State"
+        />
+        <CustomInput
+          name="pension-ID-input"
+          type="text"
+          label="PAYE ID"
+        />
+        <CustomInput
+          name="nhf-code-input"
+          type="text"
+          label="NHF Code"
+        />
+        <CustomInput
+          name="website-input"
+          type="url"
+          label="Website"
+        />
+        <CustomInput
+          name="indstry-input"
+          type="text"
+          label="Industry"
+        />
+        <div class="form-action-btn flex gap-2">
+          <CallToAction
+            button-text="Cancel"
+            :is-colored="false"
+          />
+          <CallToAction
+            button-text="Save"
+            :is-colored="true"
+          />
+        </div>
+      </form>
     </section>
   </main>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const logoFilePreview = ref('')
+const regFilePreview = ref('')
+const fileName = ref('')
+
+const companySizeOptions = ['Less than 5', '5 to 10', "10 to 50", "100 and above"]
+
+const stateOptions = [
+  'Lagos', 'Abuja', 'Imo', 'Oyo', 'Kano', 'Kaduna', 'Ondo'
+]
+
+const captureFile = (event: Event) => {
+  // @ts-ignore
+  filePreview.value = event.previewBase64;
+  // @ts-ignore
+  fileName.value = event.name;
+}
+</script>
 
 <style lang="scss" scoped>
 </style>
