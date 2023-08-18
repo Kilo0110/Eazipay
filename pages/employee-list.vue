@@ -66,6 +66,7 @@
       <EmployeeCard :employee="employee" />
     </div>
   </main>
+  <MobileNavigation />
 </template>
 
 <script setup lang="ts">
