@@ -95,7 +95,7 @@
     <header class="header w-full col-start-2 col-span-1 row-start-1 row-span-1">
       <nav class="main-nav flex items-center justify-end">
         <img
-          src="/img/dashboard-logo"
+          src="/img/dashboard-logo.png"
           alt=""
         >
         <NotificationBell />
