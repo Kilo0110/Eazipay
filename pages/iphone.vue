@@ -19,23 +19,10 @@
   </header>
   <main class="px-5 mt-5">
     <section class="wallet-section">
-      <div class="wallet-card w-full flex flex-col gap-3 bg-green-950 text-white px-5 py-8  rounded-2xl">
-        <h3>Wallet Balance</h3>
-        <p class="wallet-balance flex justify-between w-full">
-          <span class="wallet-balance-amount font-bold">
-            {{showWallet ? '&#8358; 15,067,789.00' : '****'}}
-          </span>
-          <button @click="showWallet = !showWallet">
-            <Icon
-              :name="showWallet ? 'dashicons:hidden' : 'ion:eye-outline'"
-              size="20"
-            />
-          </button>
-        </p>
-        <button class="py-2.5 px-16 rounded-full font-bold bg-[#D9EBCD] text-green-950">
-          Fund Wallet
-        </button>
-      </div>
+      <WalletCard
+        wallet-size="mobile"
+        wallet-amount="15,067,789.00"
+      />
     </section>
     <section class="quick-stats-section mt-5">
       <h2>QUICK STATS</h2>
@@ -125,7 +112,6 @@
 </template>
 
 <script setup lang="ts">
-const showWallet = ref(false)
 </script>
 
 <style lang="scss" scoped>
