@@ -13,7 +13,7 @@
         <NuxtLink>Pricing</NuxtLink>
         <NuxtLink>Set your payout</NuxtLink>
       </menu>
-      <div class="nav__button-container flex gap-3 items-center">
+      <div class="nav__button-container flex w-full max-w-[350px] gap-3 items-center">
         <CallToAction
           button-text="Log in"
           :is-colored="false"
@@ -37,7 +37,7 @@
       <CallToAction
         button-text="Start Using Free, Forever"
         :is-colored="true"
-        class="self-start px-10"
+        class="self-start px-10 max-w-[350px]"
       />
       <div class="download-prompt-container grid grid-cols-2 gap-x-3">
         <p class="col-start-1 col-span-2 ">Download the Eazipay App</p>
